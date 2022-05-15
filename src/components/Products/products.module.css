@@ -1,5 +1,6 @@
 .wrapper {
-    max-width: 70%;
+    max-width: calc(100% - 350px);
+    margin-top: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,7 +9,7 @@
 .title {
     color: rgb(235, 160, 80);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 33px;
 }
 
 .products{
@@ -27,6 +28,7 @@
     padding: 1em;
     border-radius: 15px;
     color: rgb(48, 53, 53);
+    word-break: break-all;
 }
 .productItem img {
     max-width: 100%;
@@ -37,4 +39,15 @@
     border: none;
     background-color: rgb(255, 151, 26);
     border-radius: 5px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
 }
+
+@media screen and (max-width: 730px) {
+    .wrapper {
+        max-width: 100%;
+    }
+  }
+  
