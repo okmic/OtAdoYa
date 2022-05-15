@@ -1,0 +1,63 @@
+.wrapper {
+    padding: 1em 0;
+    background-color: rgb(162, 89, 57);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper div {
+    margin: 7px 0;
+}
+
+.itemOne {
+    padding: 9px 3px;
+    border: 1px #fff solid;
+}
+
+.itemTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemButtons {
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.itemButtons button {
+    padding: 3px 10px;
+    border-radius: 15px;
+    border: none;
+    color: #696969;
+    cursor: pointer;
+}
+
+.navWrapper{ 
+    width: 100%;
+    background-color: rgb(181, 121, 82);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color:rgb(235, 196, 178)
+}
+.navWrapper span {
+    padding: 9px 3rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 750px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navWrapper span {
+        border: none;
+    }
+}
