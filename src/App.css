@@ -1,17 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500&family=Nunito:wght@600&display=swap');
+
 html {
   background-color: rgb(250, 247, 245);
   max-width: 2500px;
+  background-image: url('./img/fon.jpg');
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Andada Pro', serif;
+  font-family: 'Nunito', sans-serif;
+}
+a {
+  text-decoration: none;
 }
 .wrapperMain {
   position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.dfc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dfd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.button button {
+  margin: 15px 0 0 5px;
+  padding: 5px 25px;
+  border: none;
+  background-color: rgb(255, 151, 26);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 730px) {

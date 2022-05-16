@@ -14,6 +14,7 @@
     align-items: center;
     border: 1px solid slategrey;
     border-radius: 15px;
+    background-color: #fff;
 }
 .filters h3 {
     border-bottom: 1px solid rgb(83, 75, 75);
@@ -44,6 +45,7 @@
     padding: 1em 5px;
     border: 1px solid slategrey;
     border-radius: 15px;
+    background-color: #fff;
 }
 
 .itemPay h5 {

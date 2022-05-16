@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import styles from './basket.module.css'
-import {GiBasket} from 'react-icons/gi'
+import { GiBasket } from 'react-icons/gi'
+import { Link } from "react-router-dom"
 
-export default function Basket () {
+
+const Icon = ({ amount }) => {
+
+    return <div className={styles.amountWrapper}>
+        {amount >= 1 && <span className={styles.amount} style={{ fontSize: '13px' }}>{amount}</span>}
+        <GiBasket color="rgb(162, 89, 57)" size={35} />
+    </div>
+}
+
+
+export default function Basket() {
 
     const basket = useSelector((state) => state.pastry.basket)
 
@@ -13,30 +24,32 @@ export default function Basket () {
         setState([...basket])
     }, [basket])
 
-     useEffect(() => {
+    useEffect(() => {
         const time = setTimeout(() => {
             setState([])
         }, 3000)
 
         return () => clearTimeout(time)
-    }, [state])  
+    }, [state])
 
     return <div className={styles.wrapper}>
-        <GiBasket />
-        {
-        state 
-        ? state.map( (item, index) =>  <div className={styles.item} key={index}>
-                <span>
-                {index + 1 + " " + item.title}
-            </span>
-            <br />
-                <h1>
-                    {item.price + " руб."}
-                </h1>
+        <Link to="/dip_pastry_shop/basket">
+            <Icon amount={basket.length} />
+            <div className={styles.wrapperItem}>
+                {
+                    state && state.slice(-1).map((item, index) => <div className={styles.item} key={index}>
+                        <span>
+                            {item.title}
+                        </span>
+                        <br />
+                        <h1>
+                            {item.price + " руб."}
+                        </h1>
+                    </div>
+
+                    ).reverse()
+                }
             </div>
-        ).reverse()
-        : ''
-    }
-    
+        </Link>
     </div>
 }

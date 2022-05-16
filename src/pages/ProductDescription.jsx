@@ -3,7 +3,7 @@ import '../App.css'
 import Basket from '../components/Basket/Basket'
 import Header from '../components/Header/Header'
 import NavBar from '../components/NavBar/NavBar'
-import Product from '../components/Products/Product'
+import Product from '../components/SingleProduct/Product'
 
 export default function ProductDescription() {
 

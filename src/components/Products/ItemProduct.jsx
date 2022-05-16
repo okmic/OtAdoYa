@@ -19,7 +19,7 @@ export const Item = memo(({ id, img, title, price }) => {
         
         <h3>{title}</h3>
         <h4>{price + " руб."}</h4>
-        <div className={styles.productItemButton}>
+        <div className='button'>
             <button onClick={handleSubmit}>заказать</button>
         </div>
 

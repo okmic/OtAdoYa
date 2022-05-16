@@ -2,15 +2,15 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    max-width: 300px;
     padding: 1em;
-    background-color: rgb(162, 89, 57);
+    min-height: 50px;
+    min-width: 50px;
     max-height: 190px;
-    overflow: auto;
     color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .wrapper span {
     width: 100%;
@@ -18,6 +18,37 @@
 }
 
 .item {
+    background-color: rgb(162, 89, 57);
     border-bottom: 1px solid silver;
     padding: 1em;
+    animation: item 0.5s linear forwards;
+    border-radius: 15px;
+}
+
+.item span, h1 {
+    color: aliceblue;
+}
+
+.amountWrapper {
+    width: 36px;
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+}
+.amount {
+    position: absolute;
+    left: 11px;
+    top: 2px;
+    color: red;
+    font-weight: bold;
+}
+
+
+@keyframes item {
+    0%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
