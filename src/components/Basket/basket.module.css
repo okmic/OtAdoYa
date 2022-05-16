@@ -1,7 +1,7 @@
 .wrapper {
-    position: sticky;
-    bottom: 3em;
-    right: 3em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
     max-width: 300px;
     padding: 1em;
     background-color: rgb(162, 89, 57);
@@ -20,11 +20,4 @@
 .item {
     border-bottom: 1px solid silver;
     padding: 1em;
-}
-
-@media screen and (max-width: 750px) {
-    .wrapper {
-        position: static;
-        max-width: 100%;
-    }
 }

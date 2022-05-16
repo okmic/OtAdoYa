@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import styles from './basket.module.css'
+import {GiBasket} from 'react-icons/gi'
 
 export default function Basket () {
 
@@ -12,10 +13,19 @@ export default function Basket () {
         setState([...basket])
     }, [basket])
 
-    return <div className={state.length > 0 ? styles.wrapper : ''}>
+     useEffect(() => {
+        const time = setTimeout(() => {
+            setState([])
+        }, 3000)
+
+        return () => clearTimeout(time)
+    }, [state])  
+
+    return <div className={styles.wrapper}>
+        <GiBasket />
         {
-        state &&
-        state.map( (item, index) =>  <div className={styles.item} key={index}>
+        state 
+        ? state.map( (item, index) =>  <div className={styles.item} key={index}>
                 <span>
                 {index + 1 + " " + item.title}
             </span>
@@ -24,7 +34,9 @@ export default function Basket () {
                     {item.price + " руб."}
                 </h1>
             </div>
-        )
-        }
+        ).reverse()
+        : ''
+    }
+    
     </div>
 }
