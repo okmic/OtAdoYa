@@ -1,5 +1,6 @@
 html {
   background-color: rgb(250, 247, 245);
+  max-width: 2500px;
 }
 * {
   margin: 0;

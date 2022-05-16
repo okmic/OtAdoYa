@@ -25,15 +25,23 @@
     align-items: center;
     border: 1px solid #696969;
     margin: 1em;
-    padding: 1em;
+    padding: 1em 1em 3em 1em;
     border-radius: 15px;
     color: rgb(48, 53, 53);
     word-break: break-all;
+    background-color: #fff;
 }
 .productItem img {
     max-width: 100%;
 }
-.productItem button {
+
+.productItemButton {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.productItemButton button {
     margin: 15px 0 0 5px;
     padding: 5px 25px;
     border: none;

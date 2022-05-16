@@ -1,12 +1,11 @@
 .wrapper {
-    position: absolute;
+    position: sticky;
     bottom: 3em;
     right: 3em;
     max-width: 300px;
     padding: 1em;
-    border-radius: 50px;
     background-color: rgb(162, 89, 57);
-    max-height: 150px;
+    max-height: 190px;
     overflow: auto;
     color: aliceblue;
     display: flex;
@@ -16,4 +15,16 @@
 .wrapper span {
     width: 100%;
     font-size: 25px;
+}
+
+.item {
+    border-bottom: 1px solid silver;
+    padding: 1em;
+}
+
+@media screen and (max-width: 750px) {
+    .wrapper {
+        position: static;
+        max-width: 100%;
+    }
 }

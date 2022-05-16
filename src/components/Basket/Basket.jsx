@@ -11,10 +11,20 @@ export default function Basket () {
     useEffect(() => {
         setState([...basket])
     }, [basket])
-    return <div className={styles.wrapper}>
+
+    return <div className={state.length > 0 ? styles.wrapper : ''}>
         {
         state &&
-        state.map( (item, index) => <span key={item.index}>{item.title}</span>)
+        state.map( (item, index) =>  <div className={styles.item} key={index}>
+                <span>
+                {index + 1 + " " + item.title}
+            </span>
+            <br />
+                <h1>
+                    {item.price + " руб."}
+                </h1>
+            </div>
+        )
         }
     </div>
 }
