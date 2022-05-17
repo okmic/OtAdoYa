@@ -59,8 +59,9 @@ export default function Product() {
             data
             .filter((item) => {
                 if (String(item.id) === param.id) {
-                    return item
-                }})
+                    return true
+                } else return false
+            }) 
             .map((item) => <Item key={item.id} {...item} />)}
     </div>
 }

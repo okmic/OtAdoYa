@@ -4,24 +4,23 @@ import styles from './header.module.css'
 const data = [
     {title: 'Главная', url: '/dip_pastry_shop'},
     {title: 'Отзывы', url: '/dip_pastry_shop/reviews'},
-    {title: 'Оплата', url: '/dip_pastry_shop/basket'},
-    {title: 'Доставка', url: '/dip_pastry_shop/basket'},
-    {title: 'О нас', url: '//dip_pastry_shop/about'},
+/*     {title: 'Оплата', url: '/dip_pastry_shop/basket'}, */
+/*     {title: 'Доставка', url: '/dip_pastry_shop/basket'}, */
+    {title: 'О нас', url: '/dip_pastry_shop/about'},
     {title: 'Контакты', url: '/dip_pastry_shop/contacts'},
 ]
 
 const ItemOne = () => <div className={styles.itemOne}>
-    <h3>ИП Бровков Г.Е.</h3>
+    <h3>ИП Тест Т.Т.</h3>
 </div>
 
 const ItemTwo = () => <div className={styles.itemTwo}>
-    <h2>Конфеты Оптом</h2>
     <h4>Оптово-розничная продажа</h4>
     <h4>кондитерскими изделиями</h4>
 </div>
 
 const ItemThree = () => <div className={styles.itemTwo}>
-    <h1> 8 800 123 1234</h1>
+    <h1> 8 800 000 0000</h1>
     <h5>Звонки с мобильных и городских бесплатный</h5>
     <div className={styles.itemButtons}>
         <button>Статус заказа</button>
