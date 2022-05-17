@@ -30,7 +30,7 @@ export default function Basket() {
         }, 3000)
 
         return () => clearTimeout(time)
-    }, [state])
+    }, [state]) 
 
     return <div className={styles.wrapper}>
         <Link to="/dip_pastry_shop/basket">
@@ -38,13 +38,21 @@ export default function Basket() {
             <div className={styles.wrapperItem}>
                 {
                     state && state.slice(-1).map((item, index) => <div className={styles.item} key={index}>
-                        <span>
-                            {item.title}
-                        </span>
+                        <div className="dfc">
+                            <img src={item.img} alt={item.title} />
+                            <h5>
+                                {item.title}
+                            </h5>
+                        </div>
                         <br />
+                        <div className="dfd">
+                        <h5>
+                            Товар добавлен в корзину
+                        </h5>
                         <h1>
                             {item.price + " руб."}
                         </h1>
+                        </div>
                     </div>
 
                     ).reverse()

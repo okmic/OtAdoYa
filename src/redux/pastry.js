@@ -13,15 +13,16 @@ export const counterSlice = createSlice({
     add: (state, action) => {
       state.basket.push(action.payload)
     },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+    remove: (state, action) => {
+      state.basket = state.basket.filter((item, index) => {
+        if(index !== action.payload) {
+          return item
+        }
+      })
+    }
   },
 })
 
-export const { add, decrement, incrementByAmount } = counterSlice.actions
+export const { add, remove } = counterSlice.actions
 
 export default counterSlice.reducer

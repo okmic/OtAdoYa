@@ -5,12 +5,12 @@
     padding: 1em;
     min-height: 50px;
     min-width: 50px;
-    max-height: 190px;
     color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .wrapper span {
     width: 100%;
@@ -18,6 +18,8 @@
 }
 
 .item {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(162, 89, 57);
     border-bottom: 1px solid silver;
     padding: 1em;
@@ -25,8 +27,12 @@
     border-radius: 15px;
 }
 
-.item span, h1 {
+.item h5, h1 {
     color: aliceblue;
+}
+.item img {
+    max-width: 100px;
+    margin-right: 1em;
 }
 
 .amountWrapper {
@@ -43,6 +49,86 @@
     font-weight: bold;
 }
 
+.cartEmpty{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    font-size: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(56, 28, 17);
+
+}
+
+.wrapperBC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.navHeader {
+    padding: 1em 3em;
+    background-color: rgb(162, 89, 57);
+    color: aliceblue;
+    margin: 5px;
+    font-size: 19px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 1px solid silver;
+}
+
+.navActive {
+    background-color: rgb(199, 72, 17);
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 1em;
+    border: silver 1px solid;
+    box-sizing: border-box;
+    overflow: hidden;
+}    
+.boxBasket {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.boxContent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boxContent textarea {
+    width: 90%;
+    min-height: 100px;
+    border: 1px solid silver;
+    margin-top: 1em;
+}
+.boxInfoTitle {
+    width: 100%;
+    background-color: rgb(162, 89, 57);
+    color: aliceblue;
+    text-align: left;
+    padding: 1em 5px;
+}
+
+.infoPhone{
+    border: none;
+    border-bottom: 1px solid silver;
+}
 
 @keyframes item {
     0%{
@@ -50,5 +136,11 @@
     }
     100%{
         transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .infoBox {
+        max-width: 100%;
     }
 }

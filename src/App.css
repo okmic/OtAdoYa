@@ -32,10 +32,23 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.dfa {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .button {
   height: 100%;
   display: flex;
   align-items: flex-end;
+}
+
+.m1 {
+  margin: 1em;
+}
+.p1 {
+  padding: 1em;
 }
 
 .button button {
