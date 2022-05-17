@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dip_pastry_shop/static/css/main.680a6e8a.css",
-    "main.js": "/dip_pastry_shop/static/js/main.6a3a19f7.js",
+    "main.css": "/dip_pastry_shop/static/css/main.2e4b44fa.css",
+    "main.js": "/dip_pastry_shop/static/js/main.af65fc34.js",
     "static/media/8.jpg": "/dip_pastry_shop/static/media/8.ce5e171c5d73467e5223.jpg",
     "static/media/4.png": "/dip_pastry_shop/static/media/4.154a659eac81e85603c8.png",
     "static/media/17.jpg": "/dip_pastry_shop/static/media/17.e505cfb2c7bdf8af1cdd.jpg",
@@ -28,17 +28,16 @@
     "static/media/26.jpg": "/dip_pastry_shop/static/media/26.a63a4e47d8ef5d925b8a.jpg",
     "static/media/12.jpg": "/dip_pastry_shop/static/media/12.806818af754dcdef47ef.jpg",
     "static/media/16.jpg": "/dip_pastry_shop/static/media/16.92acaee98f812c86df91.jpg",
-    "static/media/pay.png": "/dip_pastry_shop/static/media/pay.7b9bc54d1933adc2f962.png",
     "static/media/3.jpg": "/dip_pastry_shop/static/media/3.227fa625fc739f558685.jpg",
     "static/media/27.jpg": "/dip_pastry_shop/static/media/27.90669888ec6c548350de.jpg",
     "static/media/18.jpg": "/dip_pastry_shop/static/media/18.f20367135aedeb546113.jpg",
     "static/media/28.png": "/dip_pastry_shop/static/media/28.a2f9b1179760d188e6ae.png",
     "index.html": "/dip_pastry_shop/index.html",
-    "main.680a6e8a.css.map": "/dip_pastry_shop/static/css/main.680a6e8a.css.map",
-    "main.6a3a19f7.js.map": "/dip_pastry_shop/static/js/main.6a3a19f7.js.map"
+    "main.2e4b44fa.css.map": "/dip_pastry_shop/static/css/main.2e4b44fa.css.map",
+    "main.af65fc34.js.map": "/dip_pastry_shop/static/js/main.af65fc34.js.map"
   },
   "entrypoints": [
-    "static/css/main.680a6e8a.css",
-    "static/js/main.6a3a19f7.js"
+    "static/css/main.2e4b44fa.css",
+    "static/js/main.af65fc34.js"
   ]
 }
