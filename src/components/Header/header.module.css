@@ -44,6 +44,9 @@
     flex-wrap: wrap;
     color:rgb(235, 196, 178)
 }
+.navWrapper a{
+    color: #fff;
+}
 .navWrapper span {
     padding: 9px 3rem;
     cursor: pointer;

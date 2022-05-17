@@ -143,4 +143,9 @@
     .infoBox {
         max-width: 100%;
     }
+    .navHeader{
+        margin: 5%;
+        padding: 5%;
+        max-width: 100%;
+    }
 }

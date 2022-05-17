@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom'
 import styles from './header.module.css'
 
 const data = [
-    {title: 'Главная', url: '/'},
-    {title: 'Отзывы', url: '/'},
-    {title: 'Оплата', url: '/'},
-    {title: 'Доставка', url: '/'},
-    {title: 'О нас', url: '/'},
-    {title: 'Контакты', url: '/'},
+    {title: 'Главная', url: '/dip_pastry_shop'},
+    {title: 'Отзывы', url: '/dip_pastry_shop/reviews'},
+    {title: 'Оплата', url: '/dip_pastry_shop/basket'},
+    {title: 'Доставка', url: '/dip_pastry_shop/basket'},
+    {title: 'О нас', url: '//dip_pastry_shop/about'},
+    {title: 'Контакты', url: '/dip_pastry_shop/contacts'},
 ]
 
 const ItemOne = () => <div className={styles.itemOne}>
@@ -30,7 +31,7 @@ const ItemThree = () => <div className={styles.itemTwo}>
 
 const Nav = () => {
     return <nav className={styles.navWrapper}>
-         {data.map(item => <span key={item.title}>{item.title}</span>)}
+         {data.map(item => <Link to={item.url} key={item.title}><span>{item.title}</span></Link>)}
     </nav>
 }
 

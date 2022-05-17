@@ -1,6 +1,5 @@
 import { memo, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import useInput from '../../hooks/useInput'
 import { remove } from '../../redux/pastry'
 import styles from './basket.module.css'
 import { AiFillCloseCircle } from 'react-icons/ai'
@@ -21,16 +20,14 @@ export const InfoBlock = ({ title, children }) => <div className={styles.infoBox
 export default memo(function Check({ phone, email, city, user, userDate, timeDelivery, deliveryAddress }) {
 
     const data = useSelector((state) => state.pastry.basket)
-
     const [total, setTotal] = useState(0)
 
     useEffect(() => {
-        console.log(data)
+        setTotal(0)
         data.forEach(item => {
-            setTotal(total + item.price)
-            console.log(item.price)
+            setTotal((prev) => prev + item.price)
         })
-    }, data)
+    }, [data])
 
     const dispatch = useDispatch()
 
