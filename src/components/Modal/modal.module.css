@@ -1,0 +1,46 @@
+.wrapper{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: modal 0.5s forwards;
+    opacity: 0;
+}
+
+.container {
+    padding: 1em;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: aliceblue;
+    border: 1px solid silver;
+    border-radius: 15px;
+}
+.bodyWrapper{
+    margin: 3em 0;
+    padding: 1.5em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.bodyWrapper a {
+    color: rgb(29, 41, 141);
+    margin: 5px;
+}
+
+@keyframes modal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

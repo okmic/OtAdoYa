@@ -21,10 +21,14 @@ export default function Feedback () {
     const [order, setOrder] = useState(false)
 
     const handleSubmit = () => {
-        disptach(addReviews({id: reviews.length, user: name.value, title: title.value}))
-        setOrder(false)
-        name.onChange()
-        title.onChange()
+        if(name.value.length <= 0 || title.value.length <= 0) {
+            return
+        } else {
+            disptach(addReviews({id: reviews.length, user: name.value, title: title.value}))
+            setOrder(false)
+            name.onChange()
+            title.onChange()
+        }
     }
 
 

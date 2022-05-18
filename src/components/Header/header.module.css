@@ -42,7 +42,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color:rgb(235, 196, 178)
+    color:rgb(235, 196, 178);
+    padding: 5px;
 }
 .navWrapper a{
     color: #fff;
@@ -51,7 +52,6 @@
     padding: 9px 3rem;
     cursor: pointer;
 }
-
 
 @media screen and (max-width: 750px) {
     .wrapper {

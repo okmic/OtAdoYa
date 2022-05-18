@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './header.module.css'
 
 const data = [
@@ -11,7 +11,7 @@ const data = [
 ]
 
 const ItemOne = () => <div className={styles.itemOne}>
-    <h3>ИП Тест Т.Т.</h3>
+    <h3>От А до Я</h3>
 </div>
 
 const ItemTwo = () => <div className={styles.itemTwo}>
@@ -20,17 +20,27 @@ const ItemTwo = () => <div className={styles.itemTwo}>
 </div>
 
 const ItemThree = () => <div className={styles.itemTwo}>
-    <h1> 8 800 000 0000</h1>
+        <a href="tel:+78782210133">
+            <h1>+7 (8782) 21‒01‒33</h1>
+        </a>
     <h5>Звонки с мобильных и городских бесплатный</h5>
     <div className={styles.itemButtons}>
+    <a href="tel:+78782210133">
         <button>Статус заказа</button>
+    </a>
+    <a href="mailto:test@test.ru">
         <button>Заказать звонков</button>
+    </a>
     </div>
+    
 </div>
 
 const Nav = () => {
     return <nav className={styles.navWrapper}>
-         {data.map(item => <Link to={item.url} key={item.title}><span>{item.title}</span></Link>)}
+         {data.map(item => <NavLink to={item.url} key={item.title}>
+             <span style={{padding: '1em 5px'}}>
+                 {item.title}
+            </span></NavLink>)}
     </nav>
 }
 
