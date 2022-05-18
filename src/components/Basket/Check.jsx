@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { remove } from '../../redux/pastry'
+import { addBuyer, remove } from '../../redux/pastry'
 import styles from './basket.module.css'
 import { AiFillCloseCircle } from 'react-icons/ai'
 
@@ -17,10 +17,11 @@ export const InfoBlock = ({ title, children }) => <div className={styles.infoBox
     {children}
 </div>
 
-export default memo(function Check({ phone, email, city, user, userDate, timeDelivery, deliveryAddress }) {
+export default memo(function Check({ phone, email, city, user, userDate, timeDelivery, deliveryAddress, setOrder }) {
 
     const data = useSelector((state) => state.pastry.basket)
     const [total, setTotal] = useState(0)
+    
 
     useEffect(() => {
         setTotal(0)
@@ -30,6 +31,19 @@ export default memo(function Check({ phone, email, city, user, userDate, timeDel
     }, [data])
 
     const dispatch = useDispatch()
+
+    const handleSubmit = () => {
+        dispatch(addBuyer({
+            phone: phone.value,
+            email: email.value,
+            city: city.value,
+            user: user.value,
+            userDate: userDate.value,
+            timeDelivery: timeDelivery.value,
+            deliveryAddress: deliveryAddress.value
+        }))
+        setOrder(true) 
+    }
 
     return <>
         <div className={styles.infoContainer}>
@@ -86,7 +100,7 @@ export default memo(function Check({ phone, email, city, user, userDate, timeDel
                             <h3>Стоимость доставки</h3>
                             <h2>Итого: {total} руб.</h2>
                         <div className="button">
-                            <button onClick={() => alert('click')}>Проверить</button>
+                            <button onClick={handleSubmit}>Проверить</button>
                         </div>
                     </div>
 

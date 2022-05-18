@@ -7,7 +7,8 @@ const initialState = {
   reviews: [
     {id: 1, user: "Алексей", title: "Обслуживание хорошое, 5 из 5"},
     {id: 1, user: "Дмитрий", title: "Все круто!"}
-  ]
+  ],
+  buyer: {}
 }
 
 export const counterSlice = createSlice({
@@ -26,10 +27,13 @@ export const counterSlice = createSlice({
     },
     addReviews: (state, action) => {
       state.reviews.push({...action.payload})
+    },
+    addBuyer: (state, action) => {
+      state.buyer = action.payload
     }
   },
 })
 
-export const { add, remove, addReviews } = counterSlice.actions
+export const { add, remove, addReviews, addBuyer } = counterSlice.actions
 
 export default counterSlice.reducer

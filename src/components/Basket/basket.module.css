@@ -129,7 +129,47 @@
     border: none;
     border-bottom: 1px solid silver;
 }
+.bayBasket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-height: 300%;
+    background-color: rgb(245, 240, 240);
+    border-radius: 15px;
+    padding: 1em;
+}
 
+.ready{
+    position: relative;
+    top: 20vh;
+    left: 0;
+    max-width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(90, 73, 73, 0.781);
+    color: #fff;
+    border-radius: 25px;
+    animation: ready 0.7s forwards;  
+}
+
+.boxReady{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+@keyframes ready {
+    0%{
+        transform: scale(0)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
 @keyframes item {
     0%{
         transform: translateX(300px);
@@ -147,5 +187,14 @@
         margin: 5%;
         padding: 5%;
         max-width: 100%;
+    }
+
+    .bayBasket {
+        width: 100%;
+    }
+    .ready {
+        width: 100%;
+        height: 100%;
+        font-size: 19px;
     }
 }
