@@ -8,10 +8,10 @@ import Feedback from './Feedback'
     <img src={pay} alt="123" />
 </div> */
 
-export default function NavBar() {
+export default function NavBar({setCategory}) {
     return <div className={styles.wrapper}>
 {/* <Pay /> */}
-        <Filters />
+        <Filters setCategory={setCategory} />
         <Feedback />
     </div>
 }

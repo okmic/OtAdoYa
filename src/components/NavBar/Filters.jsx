@@ -1,33 +1,34 @@
 import styles from './nav.module.css'
 
 const data = [
-    {title: 'Печенье', func: (callback, key) => callback(key)},
-    {title: 'Вафли', func: (callback, key) => callback(key)},
-    {title: 'Пряники', func: (callback, key) => callback(key)},
-    {title: 'Шоколад в плитках', func: (callback, key) => callback(key)},
-    {title: 'Конфеты в коробках', func: (callback, key) => callback(key)},
-    {title: 'Зефир', func: (callback, key) => callback(key)},
-    {title: 'Мармелад', func: (callback, key) => callback(key)},
-    {title: 'Бисквиты', func: (callback, key) => callback(key)},
-    {title: 'Шоколадные батончики', func: (callback, key) => callback(key)},
-    {title: 'Конфеты фасованные', func: (callback, key) => callback(key)}
+    {title: 'Печенье', category: 1},
+    {title: 'Вафли', category: 2},
+    {title: 'Пряники', category: 3},
+    {title: 'Шоколад в плитках', category: 4},
+    {title: 'Конфеты в коробках', category: 5},
+    {title: 'Зефир', category: 6},
+    {title: 'Мармелад', category: 7},
+    {title: 'Бисквиты', category: 8},
+    {title: 'Шоколадные батончики', category: 10},
+    {title: 'Конфеты фасованные', category: 9},
+    {title: 'Сбросить', category: 0}
 ]
 
-const Item = ({title, func}) => {
+const Item = ({title, category, setCategory}) => {
 
     const handleSubmit = () => {
-        func(() => alert('click: ' + title) ,title)
+        setCategory(category)
     }
 
-    return <span onClick={handleSubmit}>{title}</span>
+    return <span style={{cursor: 'pointer'}} onClick={handleSubmit}>{title}</span>
 }
 
-export default function Filters () {
+export default function Filters ({setCategory}) {
     return <div className={styles.filters}>
         <h3>Кодитерские изделия</h3>
 
         <div className={styles.boxItems}>
-            {data.map((index) => <Item key={index.title} title={index.title} func={index.func} /> )}
+            {data.map((item) => <Item key={item.title} title={item.title} category={item.category} setCategory={setCategory} /> )}
         </div>
 
     </div>

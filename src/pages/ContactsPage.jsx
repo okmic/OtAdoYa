@@ -8,6 +8,5 @@ export default function ContactsPage() {
         <div style={{display: 'flex', flexDirection:'column', alignItems: 'center'}}>
             <Contacts />
         </div>
-
     </>
 }

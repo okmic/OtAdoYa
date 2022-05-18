@@ -15,6 +15,7 @@ export default function App() {
         <Route path='/dip_pastry_shop/basket'  element={<BasketPage />} />
         <Route path='/dip_pastry_shop/reviews'  element={<ReviewsPage />} />
         <Route path='/dip_pastry_shop/contacts'  element={<ContactsPage />} />
+        <Route path='/dip_pastry_shop/about'  element={<ContactsPage />} />
       </Routes>
     </div>
   </BrowserRouter>
