@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dip_pastry_shop/static/css/main.1f191503.css",
-    "main.js": "/dip_pastry_shop/static/js/main.4bf8b253.js",
+    "main.css": "/dip_pastry_shop/static/css/main.dfbbce1a.css",
+    "main.js": "/dip_pastry_shop/static/js/main.14825dc9.js",
     "static/media/8.jpg": "/dip_pastry_shop/static/media/8.ce5e171c5d73467e5223.jpg",
     "static/media/4.png": "/dip_pastry_shop/static/media/4.154a659eac81e85603c8.png",
     "static/media/17.jpg": "/dip_pastry_shop/static/media/17.e505cfb2c7bdf8af1cdd.jpg",
@@ -33,11 +33,11 @@
     "static/media/18.jpg": "/dip_pastry_shop/static/media/18.f20367135aedeb546113.jpg",
     "static/media/28.png": "/dip_pastry_shop/static/media/28.a2f9b1179760d188e6ae.png",
     "index.html": "/dip_pastry_shop/index.html",
-    "main.1f191503.css.map": "/dip_pastry_shop/static/css/main.1f191503.css.map",
-    "main.4bf8b253.js.map": "/dip_pastry_shop/static/js/main.4bf8b253.js.map"
+    "main.dfbbce1a.css.map": "/dip_pastry_shop/static/css/main.dfbbce1a.css.map",
+    "main.14825dc9.js.map": "/dip_pastry_shop/static/js/main.14825dc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f191503.css",
-    "static/js/main.4bf8b253.js"
+    "static/css/main.dfbbce1a.css",
+    "static/js/main.14825dc9.js"
   ]
 }
