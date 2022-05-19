@@ -33,7 +33,7 @@ export default function Basket() {
     }, [state]) 
 
     return <div className={styles.wrapper}>
-        <Link to="/dip_pastry_shop/basket">
+        <Link to="/OtAdoYa/basket">
             <Icon amount={basket.length} />
             <div className={styles.wrapperItem}>
                 {

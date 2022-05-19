@@ -13,7 +13,7 @@ export const Item = memo(({ id, img, title, price }) => {
     }
 
     return <div className={styles.productItem}>
-        <Link to={`/dip_pastry_shop/${id}`} >
+        <Link to={`/OtAdoYa/${id}`} >
             <img src={img} alt={title} />
         </Link>
         

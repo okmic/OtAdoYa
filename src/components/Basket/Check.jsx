@@ -97,7 +97,7 @@ export default memo(function Check({ phone, email, city, user, userDate, timeDel
                             <option value="Наличными">Наличными</option>
                         </select>
                             <h3>Стоимость товаров: {total} руб.</h3>
-                            <h3>Стоимость доставки</h3>
+                            <h3>Стоимость доставки: 0</h3>
                             <h2>Итого: {total} руб.</h2>
                         <div className="button">
                             <button onClick={handleSubmit}>Проверить</button>

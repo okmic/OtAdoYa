@@ -16,7 +16,7 @@ const Header = ({ order }) => <div className='dfc'>
 const Ready = () => <div className={styles.ready}>
     <div className={styles.boxReady}>
         <AiOutlineFileDone color="green" size={50} />
-        <h2>Отправленно</h2>
+        <h2>Отправлено</h2>
     </div>
 </div>
 
@@ -39,7 +39,7 @@ export default memo(function ContainerBasket() {
     if (data.length <= 0) {
         return <div className={styles.cartEmpty}>
             Корзина пуста
-            <Link to='/dip_pastry_shop' className='button'>
+            <Link to='/OtAdoYa' className='button'>
                 <button>Вернуться назад</button>
             </Link>
         </div>

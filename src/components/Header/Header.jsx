@@ -2,12 +2,12 @@ import { NavLink } from 'react-router-dom'
 import styles from './header.module.css'
 
 const data = [
-    {title: 'Главная', url: '/dip_pastry_shop'},
-    {title: 'Отзывы', url: '/dip_pastry_shop/reviews'},
-/*     {title: 'Оплата', url: '/dip_pastry_shop/basket'}, */
-/*     {title: 'Доставка', url: '/dip_pastry_shop/basket'}, */
-    {title: 'О нас', url: '/dip_pastry_shop/about'},
-    {title: 'Контакты', url: '/dip_pastry_shop/contacts'},
+    {title: 'Главная', url: '/OtAdoYa'},
+    {title: 'Отзывы', url: '/OtAdoYa/reviews'},
+/*     {title: 'Оплата', url: '/OtAdoYa/basket'}, */
+/*     {title: 'Доставка', url: '/OtAdoYa/basket'}, */
+    {title: 'О нас', url: '/OtAdoYa/about'},
+    {title: 'Контакты', url: '/OtAdoYa/contacts'},
 ]
 
 const ItemOne = () => <div className={styles.itemOne}>

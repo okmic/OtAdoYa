@@ -33,7 +33,7 @@ export default function Feedback () {
 
 
     return <div className={styles.filters}>
-        <Link to="/dip_pastry_shop/reviews"><h3>Отзывы о работе</h3></Link>
+        <Link to="/OtAdoYa/reviews"><h3>Отзывы о работе</h3></Link>
         {reviews.map((item, index) => <Item key={index} user={item.user} title={item.title} /> )}
         {!order 
         ?<button onClick={() => setOrder(true)}>Добавить отзыв</button>
